@@ -58,8 +58,8 @@
  {:regex "(?s).*[Bb]labs.*"
   :action :send-message
   :action-args "eh?"
-  :probability 30
-  :rate-limit 180}
+  :probability 4
+  :rate-limit 300}
 
  :interns
  {:regex "(?s)!interns.*"
