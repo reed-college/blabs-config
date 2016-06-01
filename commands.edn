@@ -88,6 +88,11 @@
                 "https://cloud.githubusercontent.com/assets/768965/10530626/65a72ae2-735e-11e5-9e0d-f53a37b28f6d.gif"
                 "https://cloud.githubusercontent.com/assets/768965/10530633/7f99b1d6-735e-11e5-8520-d5026f8170d6.gif"],
   :help "!om(f)g (case insensitive) at the beginning of any line prints a random omg gif."},
+:OK
+ {:regex "!OK\\s*",
+  :action :random-emote-by-key,
+  :action-args ["http://reactiongifs.com/?p=20574"],
+  :help "!OK at the beginning of any line prints the seal of approval gif."},
 
  :add-quote
  {:regex "(?s)!q[uote]* add ([\\w\\s\\.-]+): (.+)",
