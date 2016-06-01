@@ -52,7 +52,7 @@
 ;;
 {:random-emoji-responder
  {:probability 10
-  :rate-limit 120}
+  :rate-limit 300}
 
  :eh
  {:regex "(?s).*[Bb]labs.*"
