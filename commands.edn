@@ -62,7 +62,7 @@
   :rate-limit 180}
 
  :interns
- {:regex "(?S)!interns.*"
+ {:regex "(?s)!interns.*"
   :action :send-message
   :action-args "@kamba @benblack @howelle @akrishishere @weij @alexgrant @rkenelly @bagariar @chadorem @helzhang @justinewang @laisrael @ziyuan_zhong"}
 
