@@ -105,6 +105,22 @@
                 "http://www.reactiongifs.com/r/tghf.gif"],
   :help "!highfive (case insensitive) at the beginning of any line prints a random high five gif."},
 
+ :glitter
+ {:regex "(?s)!glitter.*"
+  :action :random-emote-by-key
+  :action-args ["http://i.imgur.com/9cjIa6y.gif",
+                "http://i.imgur.com/0FI0VIJ.gif",
+                "http://i.imgur.com/GCF1M8j.gif",
+                "http://i.imgur.com/kBJBGXy.gif",
+                "http://i.imgur.com/CZgsqQ9.gif",
+                "http://i.imgur.com/FjjYquF.gif",
+                "http://i.imgur.com/KxrfOGT.gif",
+                "http://i.imgur.com/q2QQHcn.gif",
+                "http://i.imgur.com/QSIIlss.gif",
+                "http://i.imgur.com/Stou6rZ.gif",
+                "http://i.imgur.com/BhqiIRN.gif"]
+  :help "!glitter at the beginning of any line print a random glitter gif"}
+
  :add-quote
  {:regex "(?s)!q[uote]* add ([\\w\\s\\.-]+): (.+)",
   :action :add-quote,
