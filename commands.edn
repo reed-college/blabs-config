@@ -56,9 +56,9 @@
 
  :eh
  {:regex "(?s).*[Bb]labs.*"
-  :action :send-message
+  :action :maye-send-message
   :action-args "eh?"
-  :probability 4
+  :probability 10
   :rate-limit 300}
 
  :interns
