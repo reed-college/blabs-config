@@ -95,6 +95,16 @@
   :action-args ["http://reactiongifs.com/?p=20574"],
   :help "!OK at the beginning of any line prints the seal of approval gif."},
 
+ :high-five
+ {:regex "(?i)!highfive\\s*",
+  :action :random-emote-by-key,
+  :action-args ["http://s3-ec.buzzfed.com/static/enhanced/webdr06/2013/6/17/17/anigif_enhanced-buzz-3058-1371504667-2.gif"
+                "http://s3-ec.buzzfed.com/static/enhanced/webdr03/2013/6/17/17/anigif_enhanced-buzz-26253-1371504867-0.gif"
+                "http://37.media.tumblr.com/134d2e1a589f19939d040aaed1576701/tumblr_msh91dvGcD1rlzne8o1_400.gif"
+                "http://33.media.tumblr.com/6e2413cb66658455acd48782cefb752d/tumblr_njxr75GyuN1rp6csgo1_400.gif"
+                "http://www.reactiongifs.com/r/tghf.gif"],
+  :help "!highfive (case insensitive) at the beginning of any line prints a random high five gif."},
+
  :add-quote
  {:regex "(?s)!q[uote]* add ([\\w\\s\\.-]+): (.+)",
   :action :add-quote,
