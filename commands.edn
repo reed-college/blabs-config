@@ -121,6 +121,20 @@
                 "http://i.imgur.com/BhqiIRN.gif"]
   :help "!glitter at the beginning of any line print a random glitter gif"}
 
+ :computers
+ {:regex "(?s)!computers.*"
+  :action :random-emote-by-key
+  :action-args ["http://wil.to/_/computer-cookin.jpg"
+                "http://wil.to/_/computerin.gif"
+                "http://wil.to/_/computerin2.gif"
+                "http://bukk.it/helpcomputer.gif"
+                "https://media.giphy.com/media/PxSFAnuubLkSA/giphy.gif",
+                "https://media.giphy.com/media/xTiTnJ3BooiDs8dL7W/giphy.gif"
+                "https://reed-sds.slack.com/files/karawoo/F1FLT53A7/creepy-woman-typing.gif"
+                "https://reed-sds.slack.com/files/laisrael/F1FRHKV3M/cat-typing.gif"
+                "https://media.giphy.com/media/jM66C09QgTon6/giphy.gif"]
+  :help "!computers at the beginning of a line, b/c sometimes computers"}
+
  :add-quote
  {:regex "(?s)!q[uote]* add ([\\w\\s\\.-]+): (.+)",
   :action :add-quote,
