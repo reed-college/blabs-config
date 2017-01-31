@@ -64,7 +64,7 @@
  :interns
  {:regex "(?s)!interns.*"
   :action :send-message
-  :action-args "@kamba @benblack @howelle @akrishishere @weij @alexgrant @rkennelly @bagariar @chadorem @helzhang @justinewang @laisrael @ziyuan_zhong"}
+  :action-args "@alexgrant @rkennelly @chadorem @abmamo @nguyehi @corbinb96 @edbreeden @flllra @hannah_sophia @maragibbs @margiemargie @marikaswanberg @miriambern @pgraham"}
 
  :tableflip
  {:regex "!tableflip\\s*",
