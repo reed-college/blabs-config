@@ -136,6 +136,19 @@
                 "https://media.giphy.com/media/jM66C09QgTon6/giphy.gif"]
   :help "!computers at the beginning of a line, b/c sometimes computers"}
 
+:problem
+ {:regex "(?s)!problem.*"
+  :action :random-emote-by-key
+  :action-args ["http://i.giphy.com/SeiTanOfxZkmk.gif",
+                "http://i.giphy.com/R6NOIvUHU2PM4.gif",
+                "http://i.giphy.com/a95a1J0aT4dhu.gif",
+                "http://i.giphy.com/QXxAGtM56RP6E.gif",
+                "http://i.giphy.com/awJ8UfeQ2e4QE.gif",
+                "http://i.giphy.com/4YxCIAubQ0dCU.gif",
+                "http://i.giphy.com/yiGcmmpGcIYMg.gif",
+                "http://i.giphy.com/skgiM4tXY8i1q.gif"]
+  :help "!problem at the beginning of any line print a random  gif of an animal doing something difficult or failing at something"}
+
  :add-quote
  {:regex "(?s)!q[uote]* add ([\\w\\s\\.-]+): (.+)",
   :action :add-quote,
