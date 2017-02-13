@@ -93,6 +93,10 @@
   {:regex "(?i)!yay\\s*",
    :action :random-emote-by-key,
    :action-args ["http://i.imgur.com/peSXLJV.gif"
+                 "https://66.media.tumblr.com/c8a0129540d3472f9f4ba58160b50f7b/tumblr_ncdj3dF6391qj4315o1_500.gif"
+                 "http://rbk.h-cdn.co/assets/16/01/1452035417-giphy.gif"
+                 "https://i.makeagif.com/media/2-21-2015/5Q0dZg.gif"
+                 "https://media.giphy.com/media/FlWgXEtj5aM5G/giphy.gif"
                  "https://m.popkey.co/79b152/qrvKb.gif"],
    :help "!yay at the beginning of any line prints a random yay gif."},
 
