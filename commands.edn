@@ -88,6 +88,13 @@
                 "https://cloud.githubusercontent.com/assets/768965/10530626/65a72ae2-735e-11e5-9e0d-f53a37b28f6d.gif"
                 "https://cloud.githubusercontent.com/assets/768965/10530633/7f99b1d6-735e-11e5-8520-d5026f8170d6.gif"],
   :help "!om(f)g (case insensitive) at the beginning of any line prints a random omg gif."},
+ 
+  :yay
+  {:regex "(?i)!yay\\s*",
+   :action :random-emote-by-key,
+   :action-args ["http://i.imgur.com/peSXLJV.gif"
+                 "https://m.popkey.co/79b152/qrvKb.gif"],
+   :help "!yay at the beginning of any line prints a random yay gif."},
 
  :ok
  {:regex "(?i)!OK\\s*",
