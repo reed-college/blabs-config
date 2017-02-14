@@ -77,6 +77,7 @@
  {:regex "!wat\\s*",
   :action :random-emote-by-key,
   :action-args ["http://wil.to/_/wat.gif"
+                "http://readeroffictions.com/wp-content/uploads/2015/04/gif-cant-stop-wont-stop-tswift.gif"
                 "http://bukk.it/iwata.gif"],
   :help "!wat at the beginning of any line prints a random WAT gif."},
 
@@ -88,6 +89,17 @@
                 "https://cloud.githubusercontent.com/assets/768965/10530626/65a72ae2-735e-11e5-9e0d-f53a37b28f6d.gif"
                 "https://cloud.githubusercontent.com/assets/768965/10530633/7f99b1d6-735e-11e5-8520-d5026f8170d6.gif"],
   :help "!om(f)g (case insensitive) at the beginning of any line prints a random omg gif."},
+ 
+  :yay
+  {:regex "(?i)!yay\\s*",
+   :action :random-emote-by-key,
+   :action-args ["http://i.imgur.com/peSXLJV.gif"
+                 "https://66.media.tumblr.com/c8a0129540d3472f9f4ba58160b50f7b/tumblr_ncdj3dF6391qj4315o1_500.gif"
+                 "http://rbk.h-cdn.co/assets/16/01/1452035417-giphy.gif"
+                 "https://i.makeagif.com/media/2-21-2015/5Q0dZg.gif"
+                 "https://media.giphy.com/media/FlWgXEtj5aM5G/giphy.gif"
+                 "https://m.popkey.co/79b152/qrvKb.gif"],
+   :help "!yay at the beginning of any line prints a random yay gif."},
 
  :ok
  {:regex "(?i)!OK\\s*",
@@ -118,9 +130,10 @@
                 "http://i.imgur.com/q2QQHcn.gif",
                 "http://i.imgur.com/QSIIlss.gif",
                 "http://i.imgur.com/Stou6rZ.gif",
-                "http://i.imgur.com/BhqiIRN.gif"]
-  :help "!glitter at the beginning of any line print a random glitter gif"},
-
+                "http://i.imgur.com/BhqiIRN.gif",
+                "https://media.giphy.com/media/yNyDXvNb0CWg8/giphy.gif"]
+  :help "!glitter at the beginning of any line print a random glitter gif"}
+ 
 :pizza
 {:regex "(?i)!pizza\\s*"
  :action :random-emote-by-key,
@@ -146,6 +159,19 @@
                 "https://reed-sds.slack.com/files/laisrael/F1FRHKV3M/cat-typing.gif"
                 "https://media.giphy.com/media/jM66C09QgTon6/giphy.gif"]
   :help "!computers at the beginning of a line, b/c sometimes computers"}
+
+:problem
+ {:regex "(?s)!problem.*"
+  :action :random-emote-by-key
+  :action-args ["http://i.giphy.com/SeiTanOfxZkmk.gif",
+                "http://i.giphy.com/R6NOIvUHU2PM4.gif",
+                "http://i.giphy.com/a95a1J0aT4dhu.gif",
+                "http://i.giphy.com/QXxAGtM56RP6E.gif",
+                "http://i.giphy.com/awJ8UfeQ2e4QE.gif",
+                "http://i.giphy.com/4YxCIAubQ0dCU.gif",
+                "http://i.giphy.com/yiGcmmpGcIYMg.gif",
+                "http://i.giphy.com/skgiM4tXY8i1q.gif"]
+  :help "!problem at the beginning of any line print a random  gif of an animal doing something difficult or failing at something"}
 
  :add-quote
  {:regex "(?s)!q[uote]* add ([\\w\\s\\.-]+): (.+)",
