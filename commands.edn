@@ -119,7 +119,19 @@
                 "http://i.imgur.com/QSIIlss.gif",
                 "http://i.imgur.com/Stou6rZ.gif",
                 "http://i.imgur.com/BhqiIRN.gif"]
-  :help "!glitter at the beginning of any line print a random glitter gif"}
+  :help "!glitter at the beginning of any line print a random glitter gif"},
+
+:pizza
+{:regex "(?i)!pizza\\s*"
+ :action :random-emote-by-key,
+ :action-args ["https://media.giphy.com/media/3oz8xH46dD1DSx3vNK/source.gif"],
+ :action :random-emote-by-key,
+ :action-args ["http://order.hammyspizza.com/zgrid/proc/site/sitep.jsp",
+               "https://www.dominos.com/en/pages/order/#/locations/search/",
+               "https://www.pizzahut.com/#/home",
+               "http://www.pizzicatopizza.com/#!stores"]
+  :help
+  "!pizza at the beginning of any line prints a pizza gif and an url for a random pizza place's delivery page"}, 
 
  :computers
  {:regex "(?s)!computers.*"
