@@ -198,3 +198,10 @@
   :action-args ["https://img.buzzfeed.com/buzzfeed-static/static/2016-03/14/13/campaign_images/webdr12/mr-krabs-is-all-of-us-2-27015-1457975784-4_dblbig.jpg"],
   :help "!krabs at the beginning of any line will show Mr. Krabs overwhelmed."}, 
 
+ :this-is-fine
+ {:regex "(?i)!fine\\s*",
+  :action :random-emote-by-key,
+  :action-args ["https://media.giphy.com/media/z9AUvhAEiXOqA/giphy.gif",
+  				"https://68.media.tumblr.com/38deba17e8589df1cd481de12d30c2b9/tumblr_inline_njbtf1iRpi1r73ga0.gif"],
+  :help "!fine will let you know that this is fine."}, 
+
