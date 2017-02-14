@@ -191,3 +191,13 @@
   :help
   "Syntax: !whatis term\nLooks up a term in the term database.\n Example: !whatis penguin"},
  :send-define-help {:regex "(?s)!define.+", :action :send-define-help}}
+
+:chickens 
+ {:regex "(?s)!chickens.*"
+  :action :random-emote-by-key
+  :action-args ["https://www.flickr.com/photos/148172972@N07/32890290035/in/dateposted-public/",
+  "https://www.flickr.com/photos/148172972@N07/32510119470/in/dateposted-public/",
+  https://www.flickr.com/photos/148172972@N07/32075531213/in/dateposted-public/",
+  https://www.flickr.com/photos/148172972@N07/32510119100/in/dateposted-public/",
+  ]
+  :help "!chickens at the beginning of any line print a picture of Floras chickens"}
