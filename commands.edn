@@ -191,3 +191,18 @@
   :help
   "Syntax: !whatis term\nLooks up a term in the term database.\n Example: !whatis penguin"},
  :send-define-help {:regex "(?s)!define.+", :action :send-define-help}}
+
+ :nicholas-cage
+ {:regex "(?i)!nicholascage\\s*",
+  :action :random-emote-by-key,
+  :action-args ["https://media.giphy.com/media/3YGKFfw611fZS/giphy.gif",
+                "https://media.giphy.com/media/8e9eqlnQbzyFO/giphy.gif",
+                "https://media.giphy.com/media/X33qhlGfa7gtO/giphy.gif",
+                "https://media.giphy.com/media/xYJ1Nuf3TYUG4/giphy.gif",
+                "https://media.giphy.com/media/tpXb6ux3FOC6k/giphy.gif",
+                "https://media.giphy.com/media/vMtKuAR3j0niU/giphy.gif",
+                "https://media.giphy.com/media/zGqM1UO9o5dxm/giphy.gif",
+                "https://media.giphy.com/media/LXtjHzZjC5WLu/giphy.gif",
+                "https://media.giphy.com/media/9yXlZ8qH6MWWc/giphy.gif"],
+  :help "!nicholascage at the beginning of any line prints a Nicholas Cage gif."},
+
