@@ -1,0 +1,194 @@
+;; Commands Configuration Template
+;;
+;; This file documents how to specify commands for Blabs, as well as providing
+;; Blab' default configuration. Copy this file to `resources/commands.edn' as
+;; part of setting up Blabs; you'll get some nice basics and some baked-in gifs.
+;;
+;; Each configuration is a key-value pair, where key is the kebab-case :keyword
+;; name of a command, and value is a map specifying the behavior of that
+;; command (hereafter, the spec map).
+;;
+;; The spec map requires two keys:
+;; - :regex -- the text in Slack that Blabs should respond to. Note that this
+;;   will be compiled in to a regex, and so any valid Clojure regex string can
+;;   be used, but will require escaped \-es (e.g. "\\s").
+;; - :action -- the action key Blabs will use internally to dispatch a response
+;;
+;; (Note that the `random-emoji-responder' command is special, and takes
+;; no :action.)
+;;
+;; Each spec map can optionally specify these additional keys:
+;;
+;; - :user -- set the action to only respond to a user names which match a
+;;   specific regex. Defaults to "(?s).+" (match all user names)
+;; - :action-args -- some actions take additional configuration, provided in
+;;   this key. For instance, the :random-emote-by-key action looks here for
+;;   its list of emotes.
+;; - :help -- a help string, for use in Blabs' interactive help system. If
+;;   the :help key is omitted, Blabs won't offer help for that command.
+;; - :probability -- The odds odds of an action occurring. 0 is never; 100 is
+;;   always, and the default.
+;; - :rate-limit -- How many seconds should we wait between times this action
+;;   can occur? Defaults to 0.
+;;
+;; Right now, Blabs supports these user-configurable actions:
+;;
+;; - :random-emote-by-key -- Sends a random selection from `:action-args',
+;;   which should be a vector like `["yes" "no" "maybe"]'. A common use for
+;;   this is gifs; note that gifs need to be specified as URLs hosted somewhere
+;;   on the internet. Blabs currently cannot serve local gifs.
+;; - :send-message -- Sends the message in `:action-args'.
+;; - :add-quote -- Add a quote to the quoting database
+;; - :find-quote-for-name -- Find a quote in the quote database by name.
+;; - :find-random-quote -- Get a random quote from the quoting database
+;; - :add-definition -- Add a definition to the definition database
+;; - :find-definition -- Retrieve a definition.
+;;
+;; *Note*: this file is loaded when blabs is built and run; blabs must be fully
+;; restarted to pick up changes.
+;;
+;; For information on available actions and their configuration, see the Message
+;; Actions documentation.
+;;
+{:random-emoji-responder
+ {:probability 10
+  :rate-limit 300}
+
+ :eh
+ {:regex "(?s).*[Bb]labs.*"
+  :action :maybe-send-message
+  :action-args "eh?"
+  :probability 10
+  :rate-limit 300}
+
+ :interns
+ {:regex "(?s)!interns.*"
+  :action :send-message
+  :action-args "@alexgrant @rkennelly @chadorem @abmamo @nguyehi @corbinb96 @edbreeden @flllra @hannah_sophia @maragibbs @margiemargie @marikaswanberg @miriambern @pgraham"}
+
+ :tableflip
+ {:regex "!tableflip\\s*",
+  :action :random-emote-by-key,
+  :action-args ["(ﾉಥ益ಥ）ﾉ﻿ ┻━┻" "┻━┻ ︵ヽ(`Д´)ﾉ︵﻿ ┻━┻" "（╯°□°）╯︵ ┻━┻"],
+  :help
+  "!tableflip at the beginning of any line prints a random tableflip ascii!"},
+
+ :wat
+ {:regex "!wat\\s*",
+  :action :random-emote-by-key,
+  :action-args ["http://wil.to/_/wat.gif"
+                "http://readeroffictions.com/wp-content/uploads/2015/04/gif-cant-stop-wont-stop-tswift.gif"
+                "http://bukk.it/iwata.gif"],
+  :help "!wat at the beginning of any line prints a random WAT gif."},
+
+ :omg
+ {:regex "(?i)!omf?g\\s*",
+  :action :random-emote-by-key,
+  :action-args ["https://cloud.githubusercontent.com/assets/768965/10530616/553640ee-735e-11e5-9b27-323def7c55e6.gif"
+                "https://cloud.githubusercontent.com/assets/768965/10530618/57c34d66-735e-11e5-806c-fbcf7f3439a2.gif"
+                "https://cloud.githubusercontent.com/assets/768965/10530626/65a72ae2-735e-11e5-9e0d-f53a37b28f6d.gif"
+		"https://http://i.imgur.com/7eGFo3I.gif"
+                "https://cloud.githubusercontent.com/assets/768965/10530633/7f99b1d6-735e-11e5-8520-d5026f8170d6.gif"],
+  :help "!om(f)g (case insensitive) at the beginning of any line prints a random omg gif."},
+ 
+  :yay
+  {:regex "(?i)!yay\\s*",
+   :action :random-emote-by-key,
+   :action-args ["http://i.imgur.com/peSXLJV.gif"
+                 "https://66.media.tumblr.com/c8a0129540d3472f9f4ba58160b50f7b/tumblr_ncdj3dF6391qj4315o1_500.gif"
+                 "http://rbk.h-cdn.co/assets/16/01/1452035417-giphy.gif"
+                 "https://i.makeagif.com/media/2-21-2015/5Q0dZg.gif"
+                 "https://media.giphy.com/media/FlWgXEtj5aM5G/giphy.gif"
+                 "https://m.popkey.co/79b152/qrvKb.gif"],
+   :help "!yay at the beginning of any line prints a random yay gif."},
+
+ :ok
+ {:regex "(?i)!OK\\s*",
+  :action :random-emote-by-key,
+  :action-args ["http://reactiongifs.com/?p=20574"],
+  :help "!OK at the beginning of any line prints the seal of approval gif."},
+
+ :high-five
+ {:regex "(?i)!highfive\\s*",
+  :action :random-emote-by-key,
+  :action-args ["http://s3-ec.buzzfed.com/static/enhanced/webdr06/2013/6/17/17/anigif_enhanced-buzz-3058-1371504667-2.gif"
+                "http://s3-ec.buzzfed.com/static/enhanced/webdr03/2013/6/17/17/anigif_enhanced-buzz-26253-1371504867-0.gif"
+                "http://37.media.tumblr.com/134d2e1a589f19939d040aaed1576701/tumblr_msh91dvGcD1rlzne8o1_400.gif"
+                "http://33.media.tumblr.com/6e2413cb66658455acd48782cefb752d/tumblr_njxr75GyuN1rp6csgo1_400.gif"
+                "http://www.reactiongifs.com/r/tghf.gif"],
+  :help "!highfive (case insensitive) at the beginning of any line prints a random high five gif."},
+
+ :glitter
+ {:regex "(?s)!glitter.*"
+  :action :random-emote-by-key
+  :action-args ["http://i.imgur.com/9cjIa6y.gif",
+                "http://i.imgur.com/0FI0VIJ.gif",
+                "http://i.imgur.com/GCF1M8j.gif",
+                "http://i.imgur.com/kBJBGXy.gif",
+                "http://i.imgur.com/CZgsqQ9.gif",
+                "http://i.imgur.com/FjjYquF.gif",
+                "http://i.imgur.com/KxrfOGT.gif",
+                "http://i.imgur.com/q2QQHcn.gif",
+                "http://i.imgur.com/QSIIlss.gif",
+                "http://i.imgur.com/Stou6rZ.gif",
+                "http://i.imgur.com/BhqiIRN.gif",
+                "https://media.giphy.com/media/yNyDXvNb0CWg8/giphy.gif"]
+  :help "!glitter at the beginning of any line print a random glitter gif"}
+
+ :computers
+ {:regex "(?s)!computers.*"
+  :action :random-emote-by-key
+  :action-args ["http://wil.to/_/computer-cookin.jpg"
+                "http://wil.to/_/computerin.gif"
+                "http://wil.to/_/computerin2.gif"
+                "http://bukk.it/helpcomputer.gif"
+                "https://media.giphy.com/media/PxSFAnuubLkSA/giphy.gif",
+                "https://media.giphy.com/media/xTiTnJ3BooiDs8dL7W/giphy.gif"
+                "https://reed-sds.slack.com/files/karawoo/F1FLT53A7/creepy-woman-typing.gif"
+                "https://reed-sds.slack.com/files/laisrael/F1FRHKV3M/cat-typing.gif"
+                "https://media.giphy.com/media/jM66C09QgTon6/giphy.gif"]
+  :help "!computers at the beginning of a line, b/c sometimes computers"}
+
+:problem
+ {:regex "(?s)!problem.*"
+  :action :random-emote-by-key
+  :action-args ["http://i.giphy.com/SeiTanOfxZkmk.gif",
+                "http://i.giphy.com/R6NOIvUHU2PM4.gif",
+                "http://i.giphy.com/a95a1J0aT4dhu.gif",
+                "http://i.giphy.com/QXxAGtM56RP6E.gif",
+                "http://i.giphy.com/awJ8UfeQ2e4QE.gif",
+                "http://i.giphy.com/4YxCIAubQ0dCU.gif",
+                "http://i.giphy.com/yiGcmmpGcIYMg.gif",
+                "http://i.giphy.com/skgiM4tXY8i1q.gif"]
+  :help "!problem at the beginning of any line print a random  gif of an animal doing something difficult or failing at something"}
+
+ :add-quote
+ {:regex "(?s)!q[uote]* add ([\\w\\s\\.-]+): (.+)",
+  :action :add-quote,
+  :help
+  "Syntax: !q[uote] add name: quote\nAdds a quote to the quote database under a given name.\nExample: !q add Frank Zappa: I'm the slime"},
+
+ :find-quote-for-name
+ {:regex "!q[uote]* ([A-Za-z\\s\\.-]+)\\s?\\d*",
+  :action :find-quote-for-name,
+  :help
+  "Syntax: !q[uote] name\nFinds a quote for the provided name; search is case-insensitive. If more than one quote exists for an entity, a number can be provided to select one specifically.\nExample: !q frank zappa [or] !q Frank Zappa 5"},
+
+ :find-random-quote
+ {:regex "!q[uote]*",
+  :action :find-random-quote,
+  :help
+  "!q[uote], alone, followed by no other text, finds a random quote from all available quotes."},
+
+ :add-definition
+ {:regex "(?s)!define (\\w+): (.+)",
+  :action :add-definition,
+  :help
+  "Syntax: !define term: definition\nAssociates a definition with a term.\nExample: !define penguin: a little bird in a tuxedo"},
+
+ :find-definition
+ {:regex "(?s)!whatis (.+)\\s\\d+|!whatis (.+)",
+  :action :find-definition,
+  :help
+  "Syntax: !whatis term\nLooks up a term in the term database.\n Example: !whatis penguin"},
+ :send-define-help {:regex "(?s)!define.+", :action :send-define-help}}
