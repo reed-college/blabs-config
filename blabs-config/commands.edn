@@ -88,6 +88,7 @@
                 "https://cloud.githubusercontent.com/assets/768965/10530618/57c34d66-735e-11e5-806c-fbcf7f3439a2.gif"
                 "https://cloud.githubusercontent.com/assets/768965/10530626/65a72ae2-735e-11e5-9e0d-f53a37b28f6d.gif"
 		"https://http://i.imgur.com/7eGFo3I.gif"
+		"http://i.imgur.com/xgXa3lm.gif"
                 "https://cloud.githubusercontent.com/assets/768965/10530633/7f99b1d6-735e-11e5-8520-d5026f8170d6.gif"],
   :help "!om(f)g (case insensitive) at the beginning of any line prints a random omg gif."},
  
@@ -99,8 +100,7 @@
                  "http://rbk.h-cdn.co/assets/16/01/1452035417-giphy.gif"
                  "https://i.makeagif.com/media/2-21-2015/5Q0dZg.gif"
                  "https://media.giphy.com/media/FlWgXEtj5aM5G/giphy.gif"
-                 "https://m.popkey.co/79b152/qrvKb.gif"
-		 “https://68.media.tumblr.com/01e627489de7a51e86cda83e124090a4/tumblr_n08tdgkYit1tofp40o1_500.gif”],
+                 "https://m.popkey.co/79b152/qrvKb.gif"],
    :help "!yay at the beginning of any line prints a random yay gif."},
 
  :ok
@@ -108,16 +108,6 @@
   :action :random-emote-by-key,
   :action-args ["http://reactiongifs.com/?p=20574"],
   :help "!OK at the beginning of any line prints the seal of approval gif."},
- 
- :howdy
- {:regex "(?i)!howdy\\s*",
- :action :random-emote-by-key,
- :action-args ["http://i.imgur.com/d3Os2lG.gif"
-               "https://media.giphy.com/media/13fiXLvca1FrTW/giphy.gif"
-               "https://media.giphy.com/media/3o7TKyqNi5CbAv7Z4s/giphy.gif"
-               "https://m.popkey.co/369be0/Gy0e_f-maxage-0.gif"]
- :help "'round these parts we tip our hats, or print a random gif of a hat being tipped, whenever we recieve the command !howdy at the beginning of any line."},
-   
 
  :high-five
  {:regex "(?i)!highfive\\s*",
@@ -203,13 +193,3 @@
   :help
   "Syntax: !whatis term\nLooks up a term in the term database.\n Example: !whatis penguin"},
  :send-define-help {:regex "(?s)!define.+", :action :send-define-help}}
-
-:chickens 
- {:regex "(?s)!chickens.*"
-  :action :random-emote-by-key
-  :action-args ["https://www.flickr.com/photos/148172972@N07/32890290035/in/dateposted-public/",
-  "https://www.flickr.com/photos/148172972@N07/32510119470/in/dateposted-public/",
-  https://www.flickr.com/photos/148172972@N07/32075531213/in/dateposted-public/",
-  https://www.flickr.com/photos/148172972@N07/32510119100/in/dateposted-public/",
-  ]
-  :help "!chickens at the beginning of any line print a picture of Floras chickens"}
