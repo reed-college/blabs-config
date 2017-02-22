@@ -99,7 +99,8 @@
                  "http://rbk.h-cdn.co/assets/16/01/1452035417-giphy.gif"
                  "https://i.makeagif.com/media/2-21-2015/5Q0dZg.gif"
                  "https://media.giphy.com/media/FlWgXEtj5aM5G/giphy.gif"
-                 "https://m.popkey.co/79b152/qrvKb.gif"],
+                 "https://m.popkey.co/79b152/qrvKb.gif"
+		 “https://68.media.tumblr.com/01e627489de7a51e86cda83e124090a4/tumblr_n08tdgkYit1tofp40o1_500.gif”],
    :help "!yay at the beginning of any line prints a random yay gif."},
 
  :ok
