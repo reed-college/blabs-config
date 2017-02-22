@@ -108,6 +108,16 @@
   :action :random-emote-by-key,
   :action-args ["http://reactiongifs.com/?p=20574"],
   :help "!OK at the beginning of any line prints the seal of approval gif."},
+ 
+ :howdy
+ {:regex "(?i)!howdy\\s*",
+ :action :random-emote-by-key,
+ :action-args ["http://i.imgur.com/d3Os2lG.gif"
+               "https://media.giphy.com/media/13fiXLvca1FrTW/giphy.gif"
+               "https://media.giphy.com/media/3o7TKyqNi5CbAv7Z4s/giphy.gif"
+               "https://m.popkey.co/369be0/Gy0e_f-maxage-0.gif"]
+ :help "'round these parts we tip our hats, or print a random gif of a hat being tipped, whenever we recieve the command !howdy at the beginning of any line."},
+   
 
  :high-five
  {:regex "(?i)!highfive\\s*",
