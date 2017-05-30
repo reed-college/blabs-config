@@ -87,37 +87,37 @@
   :action-args ["https://cloud.githubusercontent.com/assets/768965/10530616/553640ee-735e-11e5-9b27-323def7c55e6.gif"
                 "https://cloud.githubusercontent.com/assets/768965/10530618/57c34d66-735e-11e5-806c-fbcf7f3439a2.gif"
                 "https://cloud.githubusercontent.com/assets/768965/10530626/65a72ae2-735e-11e5-9e0d-f53a37b28f6d.gif"
-		"https://http://i.imgur.com/7eGFo3I.gif"
+                "https://http://i.imgur.com/7eGFo3I.gif"
                 "https://cloud.githubusercontent.com/assets/768965/10530633/7f99b1d6-735e-11e5-8520-d5026f8170d6.gif"],
   :help "!om(f)g (case insensitive) at the beginning of any line prints a random omg gif."},
- 
-  :yay
-  {:regex "(?i)!yay\\s*",
-   :action :random-emote-by-key,
-   :action-args ["http://i.imgur.com/peSXLJV.gif"
-                 "https://66.media.tumblr.com/c8a0129540d3472f9f4ba58160b50f7b/tumblr_ncdj3dF6391qj4315o1_500.gif"
-                 "http://rbk.h-cdn.co/assets/16/01/1452035417-giphy.gif"
-                 "https://i.makeagif.com/media/2-21-2015/5Q0dZg.gif"
-                 "https://media.giphy.com/media/FlWgXEtj5aM5G/giphy.gif"
-                 "https://m.popkey.co/79b152/qrvKb.gif"
-		 “https://68.media.tumblr.com/01e627489de7a51e86cda83e124090a4/tumblr_n08tdgkYit1tofp40o1_500.gif”],
-   :help "!yay at the beginning of any line prints a random yay gif."},
+
+ :yay
+ {:regex "(?i)!yay\\s*",
+  :action :random-emote-by-key,
+  :action-args ["http://i.imgur.com/peSXLJV.gif"
+                "https://66.media.tumblr.com/c8a0129540d3472f9f4ba58160b50f7b/tumblr_ncdj3dF6391qj4315o1_500.gif"
+                "http://rbk.h-cdn.co/assets/16/01/1452035417-giphy.gif"
+                "https://i.makeagif.com/media/2-21-2015/5Q0dZg.gif"
+                "https://media.giphy.com/media/FlWgXEtj5aM5G/giphy.gif"
+                "https://m.popkey.co/79b152/qrvKb.gif"
+                "https://68.media.tumblr.com/01e627489de7a51e86cda83e124090a4/tumblr_n08tdgkYit1tofp40o1_500.gif"],
+  :help "!yay at the beginning of any line prints a random yay gif."},
 
  :ok
  {:regex "(?i)!OK\\s*",
   :action :random-emote-by-key,
   :action-args ["http://reactiongifs.com/?p=20574"],
   :help "!OK at the beginning of any line prints the seal of approval gif."},
- 
+
  :howdy
  {:regex "(?i)!howdy\\s*",
- :action :random-emote-by-key,
- :action-args ["http://i.imgur.com/d3Os2lG.gif"
-               "https://media.giphy.com/media/13fiXLvca1FrTW/giphy.gif"
-               "https://media.giphy.com/media/3o7TKyqNi5CbAv7Z4s/giphy.gif"
-               "https://m.popkey.co/369be0/Gy0e_f-maxage-0.gif"]
- :help "'round these parts we tip our hats, or print a random gif of a hat being tipped, whenever we recieve the command !howdy at the beginning of any line."},
-   
+  :action :random-emote-by-key,
+  :action-args ["http://i.imgur.com/d3Os2lG.gif"
+                "https://media.giphy.com/media/13fiXLvca1FrTW/giphy.gif"
+                "https://media.giphy.com/media/3o7TKyqNi5CbAv7Z4s/giphy.gif"
+                "https://m.popkey.co/369be0/Gy0e_f-maxage-0.gif"]
+  :help "'round these parts we tip our hats, or print a random gif of a hat being tipped, whenever we recieve the command !howdy at the beginning of any line."},
+
 
  :high-five
  {:regex "(?i)!highfive\\s*",
@@ -161,7 +161,7 @@
                 "https://media.giphy.com/media/jM66C09QgTon6/giphy.gif"]
   :help "!computers at the beginning of a line, b/c sometimes computers"}
 
-:problem
+ :problem
  {:regex "(?s)!problem.*"
   :action :random-emote-by-key
   :action-args ["http://i.giphy.com/SeiTanOfxZkmk.gif",
@@ -174,7 +174,7 @@
                 "http://i.giphy.com/skgiM4tXY8i1q.gif"]
   :help "!problem at the beginning of any line print a random  gif of an animal doing something difficult or failing at something"}
 
-:jordan
+ :jordan
  {:regex "(?s)!jordan.*"
   :action :random-emote-by-key
   :action-args ["http://giphy.com/gifs/aHnOjSIRfAz9m",
@@ -215,17 +215,16 @@
   "Syntax: !whatis term\nLooks up a term in the term database.\n Example: !whatis penguin"},
  :send-define-help {:regex "(?s)!define.+", :action :send-define-help}}
 
- :nicholas-cage
- {:regex "(?i)!nicholascage\\s*",
-  :action :random-emote-by-key,
-  :action-args ["https://media.giphy.com/media/3YGKFfw611fZS/giphy.gif",
-                "https://media.giphy.com/media/8e9eqlnQbzyFO/giphy.gif",
-                "https://media.giphy.com/media/X33qhlGfa7gtO/giphy.gif",
-                "https://media.giphy.com/media/xYJ1Nuf3TYUG4/giphy.gif",
-                "https://media.giphy.com/media/tpXb6ux3FOC6k/giphy.gif",
-                "https://media.giphy.com/media/vMtKuAR3j0niU/giphy.gif",
-                "https://media.giphy.com/media/zGqM1UO9o5dxm/giphy.gif",
-                "https://media.giphy.com/media/LXtjHzZjC5WLu/giphy.gif",
-                "https://media.giphy.com/media/9yXlZ8qH6MWWc/giphy.gif"],
-  :help "!nicholascage at the beginning of any line prints a Nicholas Cage gif."},
-
+:nicholas-cage
+{:regex "(?i)!nicholascage\\s*",
+ :action :random-emote-by-key,
+ :action-args ["https://media.giphy.com/media/3YGKFfw611fZS/giphy.gif",
+               "https://media.giphy.com/media/8e9eqlnQbzyFO/giphy.gif",
+               "https://media.giphy.com/media/X33qhlGfa7gtO/giphy.gif",
+               "https://media.giphy.com/media/xYJ1Nuf3TYUG4/giphy.gif",
+               "https://media.giphy.com/media/tpXb6ux3FOC6k/giphy.gif",
+               "https://media.giphy.com/media/vMtKuAR3j0niU/giphy.gif",
+               "https://media.giphy.com/media/zGqM1UO9o5dxm/giphy.gif",
+               "https://media.giphy.com/media/LXtjHzZjC5WLu/giphy.gif",
+               "https://media.giphy.com/media/9yXlZ8qH6MWWc/giphy.gif"],
+ :help "!nicholascage at the beginning of any line prints a Nicholas Cage gif."},
